@@ -148,9 +148,10 @@ vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
 vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim.git"
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
+vim_plugin_task "bufexplorer",      "https://github.com/markabe/bufexplorer.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
-  sh "find ruby -name '.gitignore' | xargs rm"
+ sh "find ruby -name '.gitignore' | xargs rm"
   Dir.chdir "ruby/command-t" do
     if `rvm > /dev/null 2>&1` && $?.exitstatus == 0
       sh "rvm system ruby extconf.rb"
