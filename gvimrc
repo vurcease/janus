@@ -45,6 +45,13 @@ if has("gui_macvim")
   imap <D-9> <Esc>9gt
 endif
 
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
 " Start without the toolbar
 set guioptions-=T
 
